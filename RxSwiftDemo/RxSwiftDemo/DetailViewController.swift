@@ -8,10 +8,11 @@
 
 import UIKit
 import RxSwift
+import RxRelay
 
 class DetailViewController: UIViewController {
     
-    private let valueSelected = Variable("Nothing")
+    private let valueSelected = BehaviorRelay(value:"Nothing")
     var selectedObserver:Observable<String> {
         return valueSelected.asObservable()
     }
@@ -23,7 +24,7 @@ class DetailViewController: UIViewController {
     }
     
     @IBAction func actionValueSelected(_ sender: UISegmentedControl) {
-        valueSelected.value = sender.titleForSegment(at: sender.selectedSegmentIndex)!
+        valueSelected.accept(sender.titleForSegment(at: sender.selectedSegmentIndex)!)
         navigationController?.popViewController(animated: true)
     }
     
