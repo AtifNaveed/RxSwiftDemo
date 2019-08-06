@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BfW-pQ-mhb">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="m9R-Pw-nX2">
+            <objects>
+                <navigationController id="BfW-pQ-mhb" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2h5-Th-uQD">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="yWX-dS-733" kind="relationship" relationship="rootViewController" id="FNR-wd-hhq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eM4-Hp-yat" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-338" y="257"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="Vdh-2o-bhy">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="yWX-dS-733" customClass="HomeViewController" customModule="RxSwiftDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FIi-Pg-ygV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gVa-iV-wHh">
+                                <rect key="frame" x="166.5" y="424" width="81" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Select"/>
+                                <connections>
+                                    <action selector="actionSelect:" destination="yWX-dS-733" eventType="touchUpInside" id="t4Q-1h-CcU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gVa-iV-wHh" firstAttribute="centerX" secondItem="FIi-Pg-ygV" secondAttribute="centerX" id="Sze-xd-FbE"/>
+                            <constraint firstItem="gVa-iV-wHh" firstAttribute="centerY" secondItem="FIi-Pg-ygV" secondAttribute="centerY" id="fu0-9C-V5f"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XoX-wd-KaO"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="cx7-1s-Wky"/>
+                    <connections>
+                        <outlet property="btnSelected" destination="gVa-iV-wHh" id="hsb-ar-Nud"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ovQ-Cc-Dlx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="338" y="256"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="JhG-9C-QoI">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" id="0Qe-Fi-cqN" customClass="DetailViewController" customModule="RxSwiftDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="k54-EW-sCb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="Eqn-bp-s53">
+                                <rect key="frame" x="116" y="434" width="182" height="29"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                    <segment title="Third"/>
+                                </segments>
+                                <connections>
+                                    <action selector="actionValueSelected:" destination="0Qe-Fi-cqN" eventType="valueChanged" id="dtY-s7-Tld"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Eqn-bp-s53" firstAttribute="centerY" secondItem="k54-EW-sCb" secondAttribute="centerY" id="ae1-UY-bci"/>
+                            <constraint firstItem="Eqn-bp-s53" firstAttribute="centerX" secondItem="k54-EW-sCb" secondAttribute="centerX" id="c9f-Am-Oah"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FSe-xR-wp2"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e2F-CE-PV2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1108.6956521739132" y="255.80357142857142"/>
+        </scene>
+    </scenes>
+</document>
