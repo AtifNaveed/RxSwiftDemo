@@ -44,8 +44,11 @@ class LoginViewController: UIViewController {
     
     @IBAction func actionLogin(_ sender: Any) {
         dismissKeybaord()
-        let vc = storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-        appDelegate().window?.rootViewController = vc
+        DispatchQueue.main.asyncAfter(deadline: .now()+0.1) { [weak self] in
+            guard let strongSelf = self else { return }
+            let vc = strongSelf.storyboard?.instantiateViewController(withIdentifier: String(describing: HomeViewController.self)) as! HomeViewController
+            appDelegate().window?.rootViewController = vc
+        }
     }
     
     func dismissKeybaord() {
