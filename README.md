@@ -1,5 +1,5 @@
 # RxSwiftDemo
-Reactive Swift Intro Demo
+Reactive Swift Introduction Examples
 
 Typical master detail application written in Swift using RxSwift, communicate between view controllers using Observer, Observable and DisposeBag.
 
