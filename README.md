@@ -19,3 +19,14 @@ Typical master detail application written in Swift using RxSwift, communicate be
 ![alt image is missing](https://res.cloudinary.com/atifcloud/image/upload/c_scale,h_700/v1565168133/2_pxxgqi.png)
 
 
+
+# RxSwiftTableView
+- RxSwift
+- RxCocoa
+- Driver
+- Observalbe
+- Observer
+- Disposebag
+
+![alt image is missing](https://res.cloudinary.com/atifcloud/image/upload/c_scale,h_700/v1565245275/3_hhwdsi.png)
+
