@@ -1,0 +1,6 @@
+framework module Pods_RxSwiftTableViewTests {
+  umbrella header "Pods-RxSwiftTableViewTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
