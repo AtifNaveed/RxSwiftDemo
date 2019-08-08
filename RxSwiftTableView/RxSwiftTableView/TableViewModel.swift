@@ -13,18 +13,14 @@ import RxCocoa
 class TableViewModel {
     private let privateDataSource: BehaviorRelay<[String]> = BehaviorRelay(value: [])
     private let disposeBag = DisposeBag()
-    
     public let dataSource: Observable<[String]>
-    
     init(addItemTap: Driver<Void>) {
         self.dataSource = privateDataSource.asObservable()
         addItemTap.drive(onNext: { [unowned self] _ in
-            //self.privateDataSource.value.append("Row")
             self.privateDataSource.add(element: "Row")
         }, onCompleted: {
             print("Complete")
         }).disposed(by: disposeBag)
-        
     }
 }
 

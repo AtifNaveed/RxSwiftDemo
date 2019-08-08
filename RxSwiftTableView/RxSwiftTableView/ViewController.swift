@@ -11,9 +11,8 @@ import RxSwift
 import RxCocoa
 
 class ViewController: UIViewController {
-    private var addButton: UIBarButtonItem! = nil
     @IBOutlet weak var tableView: UITableView!
-
+    private var addButton: UIBarButtonItem! = nil
     private var viewModel: TableViewModel!
     private let disposeBag = DisposeBag()
     
