@@ -1,7 +1,7 @@
 # RxSwift Introduction Examples
 
 
-# RxSwiftDemo
+# RxSwift Demo
 Typical master detail application written in Swift using 
 - RxSwift 
 - Communicate between VC using
